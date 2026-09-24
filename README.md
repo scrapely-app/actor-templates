@@ -17,3 +17,11 @@ configures builds so every push rebuilds your Actor.
 
 Each folder is a complete, buildable Actor: `scrapely.json` config, input/dataset schemas,
 Dockerfile based on the Scrapely prebuilt images, and CI-ready source code.
+
+## Template manifest
+
+[`templates.json`](templates.json) at the repo root is the machine-readable catalog the
+Scrapely platform consumes (`GET /v2/actor-templates`, the console template wizard, and
+`scrapely create` in the CLI). Each entry maps a stable template `id` (plus optional legacy
+`aliases`) to its `folder` in this repo and the `mainFile` used for previews. Keep it in
+sync when adding, renaming, or removing template folders.

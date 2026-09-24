@@ -1,0 +1,64 @@
+{
+  "templates": [
+    {
+      "id": "crawlee-cheerio-js",
+      "aliases": [],
+      "displayName": "Crawlee + Cheerio",
+      "description": "Fast web scraper using Cheerio for HTML parsing. No browser needed — ideal for static pages.",
+      "language": "javascript",
+      "useCases": ["web-scraper", "data-pipeline"],
+      "folder": "js-crawlee-cheerio",
+      "mainFile": "src/main.js"
+    },
+    {
+      "id": "crawlee-playwright",
+      "aliases": ["crawlee-playwright-js"],
+      "displayName": "Crawlee + Playwright",
+      "description": "Web scraper using headless Chromium driven by Playwright. Handles JavaScript-heavy sites.",
+      "language": "javascript",
+      "useCases": ["web-scraper", "browser-automation"],
+      "folder": "js-crawlee-playwright-chrome",
+      "mainFile": "src/main.js"
+    },
+    {
+      "id": "crawlee-puppeteer-chrome",
+      "aliases": ["crawlee-puppeteer-js"],
+      "displayName": "Crawlee + Puppeteer",
+      "description": "Web scraper using headless Chrome driven by Puppeteer. Handles JavaScript-heavy sites.",
+      "language": "javascript",
+      "useCases": ["web-scraper", "browser-automation"],
+      "folder": "js-crawlee-puppeteer-chrome",
+      "mainFile": "src/main.js"
+    },
+    {
+      "id": "crawlee-playwright-ts",
+      "aliases": [],
+      "displayName": "Crawlee + Playwright (TypeScript)",
+      "description": "Web scraper using headless Chromium driven by Playwright, written in TypeScript.",
+      "language": "typescript",
+      "useCases": ["web-scraper", "browser-automation"],
+      "folder": "ts-crawlee-playwright-chrome",
+      "mainFile": "src/main.ts"
+    },
+    {
+      "id": "crawlee-playwright-py",
+      "aliases": [],
+      "displayName": "Crawlee + Playwright",
+      "description": "Web scraper using headless Chromium driven by Playwright in Python. Handles JavaScript-heavy sites.",
+      "language": "python",
+      "useCases": ["web-scraper", "browser-automation"],
+      "folder": "python-crawlee-playwright",
+      "mainFile": "my_actor/main.py"
+    },
+    {
+      "id": "crawlee-bs4-py",
+      "aliases": [],
+      "displayName": "Crawlee + BeautifulSoup",
+      "description": "Fast web scraper using BeautifulSoup for HTML parsing in Python. No browser needed — ideal for static pages.",
+      "language": "python",
+      "useCases": ["web-scraper", "data-pipeline"],
+      "folder": "python-crawlee-beautifulsoup",
+      "mainFile": "my_actor/main.py"
+    }
+  ]
+}
