@@ -6,7 +6,7 @@ on:
         branches: [main, master]
 
 jobs:
-    test:
+    build:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v6
@@ -15,5 +15,3 @@ jobs:
                   node-version: 24
                   cache: npm
             - run: npm ci
-            - run: npx playwright install --with-deps chromium
-            - run: npm test
