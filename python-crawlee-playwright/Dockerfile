@@ -31,7 +31,6 @@ RUN python -m compileall -q my_actor/
 
 # Specify how to launch the source code of your Actor.
 
-# Restore Scrapely-owned Python runtime dependencies
 RUN \
     python -m pip install --upgrade --upgrade-strategy only-if-needed "crawlee>=1.8.0,<2.0.0"; \
     python -c "from importlib.metadata import version; import scrapely; from crawlee.request_loaders import SitemapRequestLoader; print('Scrapely runtime OK with Crawlee', version('crawlee'))"; \
