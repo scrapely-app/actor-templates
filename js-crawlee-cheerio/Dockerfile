@@ -3,9 +3,6 @@
 # You can also use any other image from Docker Hub.
 FROM scrapely/actor-node:24-latest
 
-# Check preinstalled packages
-RUN npm ls @crawlee/core scrapely puppeteer playwright
-
 # Copy just package.json and package-lock.json
 # to speed up the build using Docker layer cache.
 COPY --chown=myuser:myuser package*.json ./

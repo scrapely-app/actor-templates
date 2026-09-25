@@ -1,17 +1,11 @@
 # Specify the base Docker image. You can read more about
 # the available images at https://crawlee.dev/docs/guides/docker-images
 # You can also use any other image from Docker Hub.
-FROM scrapely/actor-node-playwright-chrome:24-latest AS builder
-
-# Check preinstalled packages
-RUN npm ls @crawlee/core scrapely puppeteer playwright
+FROM scrapely/actor-node:24-latest AS builder
 
 # Copy just package.json and package-lock.json
 # to speed up the build using Docker layer cache.
 COPY --chown=myuser:myuser package*.json Dockerfile ./
-
-# Check Playwright version is the same as the one from base image.
-RUN node check-playwright-version.mjs
 
 # Install all dependencies. Don't audit to speed up the installation.
 RUN npm install --include=dev --audit=false
@@ -25,10 +19,7 @@ COPY --chown=myuser:myuser . ./
 RUN npm run build
 
 # Create final image
-FROM scrapely/actor-node-playwright-chrome:24-latest
-
-# Check preinstalled packages
-RUN npm ls @crawlee/core scrapely puppeteer playwright
+FROM scrapely/actor-node:24-latest
 
 # Copy just package.json and package-lock.json
 # to speed up the build using Docker layer cache.

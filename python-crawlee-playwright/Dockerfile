@@ -1,6 +1,6 @@
 # First, specify the base Docker image.
 # You can also use any other image from Docker Hub.
-FROM scrapely/actor-python-playwright:3.14-latest
+FROM scrapely/actor-python:3.14-latest
 USER root
 
 
