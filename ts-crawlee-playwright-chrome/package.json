@@ -28,7 +28,8 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "postinstall": "npx crawlee install-playwright-browsers"
   },
   "author": "It's not you it's me",
   "license": "ISC"

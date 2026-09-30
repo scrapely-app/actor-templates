@@ -1,16 +1,17 @@
 # Specify the base Docker image. You can read more about
 # the available images at https://crawlee.dev/docs/guides/docker-images
 # You can also use any other image from Docker Hub.
-FROM scrapely/actor-node:24-latest
+FROM scrapely/actor-node-puppeteer-chrome:24-latest
+
+# Check preinstalled packages
+RUN npm ls @crawlee/core scrapely puppeteer playwright
 
 # Copy just package.json and package-lock.json
 # to speed up the build using Docker layer cache.
 COPY --chown=myuser:myuser package*.json Dockerfile ./
 
-# Puppeteer downloads chromium at install time; the platform redirects
-# every launch to the remote CDP browser, so skip the download.
-ENV PUPPETEER_SKIP_DOWNLOAD=1
-ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1
+# Check Puppeteer version is the same as the one from base image.
+RUN node check-puppeteer-version.mjs
 
 # Install NPM packages, skip optional and development dependencies to
 # keep the image small. Avoid logging too much and print the dependency
