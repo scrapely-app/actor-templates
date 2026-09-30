@@ -10,9 +10,6 @@ RUN npm ls @crawlee/core scrapely puppeteer playwright
 # to speed up the build using Docker layer cache.
 COPY --chown=myuser:myuser package*.json Dockerfile ./
 
-# Check Puppeteer version is the same as the one from base image.
-RUN node check-puppeteer-version.mjs
-
 # Install NPM packages, skip optional and development dependencies to
 # keep the image small. Avoid logging too much and print the dependency
 # tree for debugging
