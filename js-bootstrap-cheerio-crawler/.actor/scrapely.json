@@ -1,0 +1,17 @@
+{
+    "actorSpecification": 1,
+    "name": "js-bootstrap-cheerio-crawler",
+    "title": "Bootstrap CheerioCrawler",
+    "description": "A skeleton project to bootstrap development with CheerioCrawler in JavaScript.",
+    "version": "0.0",
+    "meta": {
+        "templateId": "js-bootstrap-cheerio-crawler",
+        "generatedBy": "<FILL-IN-MODEL>"
+    },
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "../Dockerfile"
+}

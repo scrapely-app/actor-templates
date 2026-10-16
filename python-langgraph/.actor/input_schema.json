@@ -1,0 +1,38 @@
+{
+    "title": "LangGraph Agent Python",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "query": {
+            "title": "Query",
+            "type": "string",
+            "description": "Query for the agent. The agent can fetch web pages, so include the URLs it should read.",
+            "editor": "textfield",
+            "prefill": "Summarize what https://crawlee.dev is about and list its main features.",
+            "default": "This is a fallback test query, do nothing and !!do not call any tools!!. If asked to generate structured response, create a dummy one without optional fields - minimal as possible."
+        },
+        "modelName": {
+            "title": "LLM model",
+            "type": "string",
+            "description": "Model used by the agent, called through the Scrapely LLM gateway (OpenRouter model IDs). Token usage is billed to your Scrapely account.",
+            "enum": [
+                "openai/gpt-4o-mini",
+                "openai/gpt-4o",
+                "openai/gpt-4.1-mini",
+                "openai/gpt-4.1"
+            ],
+            "default": "openai/gpt-4o-mini",
+            "prefill": "openai/gpt-4o-mini"
+        },
+        "debug": {
+            "title": "Debug",
+            "type": "boolean",
+            "description": "If enabled, the Actor will run in debug mode and produce more output.",
+            "editor": "checkbox",
+            "default": false
+        }
+    },
+    "required": [
+        "query"
+    ]
+}

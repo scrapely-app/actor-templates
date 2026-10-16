@@ -1,0 +1,30 @@
+{
+    "title": "Mastra Agent TypeScript",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "query": {
+            "title": "Query",
+            "type": "string",
+            "description": "Query for the agent. Include the URL(s) of the web page(s) the agent should read.",
+            "editor": "textfield",
+            "prefill": "Summarize what https://crawlee.dev is about and compare it with https://crawlee.dev/python.",
+            "default": "This is a fallback test query, do nothing and !!do not call any tools!!. If asked to generate structured response, create a dummy one without optional fields, and empty lists - keep it as minimal as possible."
+        },
+        "modelName": {
+            "title": "LLM model (OpenRouter)",
+            "type": "string",
+            "description": "Model ID routed through the Scrapely LLM gateway. Token usage is billed to your Scrapely account, so no provider API key is needed.",
+            "enum": [
+                "openai/gpt-4o-mini",
+                "openai/gpt-4o"
+            ],
+            "default": "openai/gpt-4o-mini",
+            "prefill": "openai/gpt-4o-mini"
+        }
+    },
+    "required": [
+        "query",
+        "modelName"
+    ]
+}

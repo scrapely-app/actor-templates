@@ -1,0 +1,4 @@
+# Feel free to add your Python dependencies below. For formatting guidelines, see:
+# https://pip.pypa.io/en/latest/reference/requirements-file-format/
+
+smolagents[openai] >= 1.15.0, < 2.0.0

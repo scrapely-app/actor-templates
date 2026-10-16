@@ -1,0 +1,44 @@
+// Web scraping and browser automation library (Read more at https://crawlee.dev)
+import { PuppeteerCrawler } from '@crawlee/puppeteer';
+import { Actor } from 'scrapely';
+
+import { router } from './routes.js';
+
+// The init() call configures the Actor to correctly work with the platform-provided environment - mainly the storage infrastructure. It is necessary that every Actor performs an init() call.
+await Actor.init();
+
+interface Input {
+    startUrls: {
+        url: string;
+        method?: 'GET' | 'HEAD' | 'POST' | 'PUT' | 'DELETE' | 'TRACE' | 'OPTIONS' | 'CONNECT' | 'PATCH';
+        headers?: Record<string, string>;
+        userData: Record<string, unknown>;
+    }[];
+}
+// Define the URLs to start the crawler with - get them from the input of the Actor or use a default list.
+const { startUrls = ['https://crawlee.dev'] } = (await Actor.getInput<Input>()) ?? {};
+
+// Create a proxy configuration that will rotate proxies from Scrapely Proxy.
+// `checkAccess` flag ensures the proxy credentials are valid, but the check can take a few hundred milliseconds.
+// Disable it for short runs if you are sure your proxy configuration is correct
+const proxyConfiguration = await Actor.createProxyConfiguration({ checkAccess: true });
+
+// Create a PuppeteerCrawler that will use the proxy configuration and and handle requests with the router from routes.ts file.
+const crawler = new PuppeteerCrawler({
+    proxyConfiguration,
+    requestHandler: router,
+    launchContext: {
+        launchOptions: {
+            args: [
+                '--disable-gpu', // Mitigates the "crashing GPU process" issue in Docker containers
+                '--no-sandbox', // Mitigates the "sandboxed" process issue in Docker containers
+            ],
+        },
+    },
+});
+
+// Run the crawler with the start URLs and wait for it to finish.
+await crawler.run(startUrls);
+
+// Gracefully exit the Actor process. It's recommended to quit all Actors with an exit().
+await Actor.exit();

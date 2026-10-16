@@ -1,0 +1,18 @@
+# configurations
+.idea
+.vscode
+.zed
+
+# crawlee and scrapely storage folders
+scrapely_storage
+crawlee_storage
+storage
+
+# generated test results
+test-results.json
+
+# installed files
+node_modules
+
+# git folder
+.git

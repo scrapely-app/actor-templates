@@ -1,0 +1,64 @@
+{
+    "actorSpecification": 1,
+    "name": "python-mcp-server",
+    "title": "Python MCP server",
+    "description": "Python Model Context Protocol (MCP) server.",
+    "version": "0.0",
+    "buildTag": "latest",
+    "usesStandbyMode": true,
+    "meta": {
+        "templateId": "python-mcp-server",
+        "generatedBy": "<FILL-IN-MODEL>"
+    },
+    "input": {
+        "title": "MCP proxy input",
+        "description": "Configures the upstream MCP server the proxy connects to. Standby runs use the default values, so change the defaults to wrap a different server.",
+        "type": "object",
+        "schemaVersion": 1,
+        "properties": {
+            "mcpServerCommand": {
+                "title": "MCP server command",
+                "type": "string",
+                "editor": "textfield",
+                "description": "Command line that starts a stdio MCP server inside the Actor container. Used when no MCP server URL is set. The default arXiv server is installed in the Dockerfile.",
+                "default": "arxiv-mcp-server",
+                "prefill": "arxiv-mcp-server"
+            },
+            "mcpServerUrl": {
+                "title": "MCP server URL",
+                "type": "string",
+                "editor": "textfield",
+                "description": "URL of a remote MCP server endpoint. When set, the proxy connects to this server instead of starting the command above."
+            },
+            "mcpServerTransport": {
+                "title": "Remote MCP server transport",
+                "type": "string",
+                "editor": "select",
+                "description": "Transport of the remote MCP server.",
+                "enum": [
+                    "http",
+                    "sse"
+                ],
+                "enumTitles": [
+                    "Streamable HTTP",
+                    "SSE"
+                ],
+                "default": "http"
+            },
+            "mcpServerAuthorization": {
+                "title": "Remote MCP server Authorization header",
+                "type": "string",
+                "editor": "textfield",
+                "isSecret": true,
+                "description": "Optional Authorization header value sent to the remote MCP server, e.g. `Bearer YOUR-API-KEY`."
+            }
+        },
+        "required": []
+    },
+    "output": "./output_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "../Dockerfile",
+    "webServerMcpPath": "/mcp"
+}

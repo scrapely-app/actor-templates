@@ -1,0 +1,5 @@
+# Feel free to add your Python dependencies below. For formatting guidelines, see:
+# https://pip.pypa.io/en/latest/reference/requirements-file-format/
+
+crawlee[playwright] >= 1.7.0
+camoufox[geoip] >= 0.5.6, < 1.0.0

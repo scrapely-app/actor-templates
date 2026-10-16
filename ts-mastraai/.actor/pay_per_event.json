@@ -1,0 +1,7 @@
+{
+    "task-completed": {
+        "eventTitle": "Price for completing the task",
+        "eventDescription": "Flat fee for completing the task.",
+        "eventPriceUsd": 0.4
+    }
+}

@@ -1,0 +1,10 @@
+# Feel free to add your Python dependencies below. For formatting guidelines, see:
+# https://pip.pypa.io/en/latest/reference/requirements-file-format/
+
+fastapi >= 0.135.0, < 1.0.0
+httpx2 >= 2.5.0, < 3.0.0
+mcp >= 2.0.0, < 3.0.0
+pydantic >= 2.0.0, < 3.0.0
+pyjwt >= 2.12.0  # Transitive dep of mcp; direct pin until mcp bumps its floor above vulnerable < 2.12.0
+uv >= 0.11.15, < 1.0.0  # Installs the wrapped stdio MCP server in the Dockerfile
+uvicorn >= 0.27.0, < 1.0.0

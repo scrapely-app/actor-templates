@@ -1,0 +1,36 @@
+# Specify the base Docker image. You can read more about
+# the available images at https://crawlee.dev/docs/guides/docker-images
+# You can also use any other image from Docker Hub.
+#
+# Keep playwright pinned to 1.59.1 (here and in package.json)! 1.60+ crashes on
+# Firefox pageErrors without a source location (unguarded pageError.location.url),
+# so one broken page kills the run. Unpin once the camoufox v152.0.2-alpha /
+# upstream playwright fix is released (https://github.com/daijro/camoufox/pull/625).
+FROM scrapely/actor-node-playwright-camoufox:24-1.59.1-latest
+
+# Check preinstalled packages
+RUN npm ls @crawlee/core scrapely playwright
+
+# Copy just package.json and package-lock.json
+# to speed up the build using Docker layer cache.
+COPY --chown=myuser:myuser package*.json Dockerfile ./
+
+# Install NPM packages, skip development dependencies to
+# keep the image small. Avoid logging too much and print the dependency
+# tree for debugging
+RUN npm --quiet set progress=false \
+    && npm install --omit=dev \
+    && echo "Installed NPM packages:" \
+    && (npm list --omit=dev --all || true) \
+    && echo "Node.js version:" \
+    && node --version \
+    && echo "NPM version:" \
+    && npm --version \
+    && rm -r ~/.npm
+
+# Next, copy the remaining files and directories with the source code.
+# Since we do this after NPM install, quick build will be really fast
+# for most source file changes.
+COPY --chown=myuser:myuser . ./
+
+CMD ["node", "src/main.js"]

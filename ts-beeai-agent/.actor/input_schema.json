@@ -1,0 +1,39 @@
+{
+    "title": "BeeAI agent TypeScript",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "query": {
+            "title": "Query",
+            "type": "string",
+            "description": "Query for the agent. Include the URL(s) of the web page(s) the agent should read.",
+            "editor": "textfield",
+            "prefill": "Summarize what https://crawlee.dev is about and list its main features. Also scrape https://crawlee.dev/python and tell me the total text length of both pages.",
+            "default": "This is a fallback test query, do nothing and !!do not call any tools!!. If asked to generate structured response, create a dummy one without optional fields - minimal as possible."
+        },
+        "modelName": {
+            "title": "LLM model (OpenRouter)",
+            "type": "string",
+            "description": "Model ID routed through the Scrapely LLM gateway (any OpenRouter model ID). Tokens are charged automatically to your Scrapely account, so no provider API key is needed.",
+            "enum": [
+                "deepseek/deepseek-v4-flash",
+                "deepseek/deepseek-v4-pro",
+                "moonshotai/kimi-k2.6",
+                "z-ai/glm-5.1"
+            ],
+            "default": "deepseek/deepseek-v4-flash",
+            "prefill": "deepseek/deepseek-v4-flash"
+        },
+        "debug": {
+            "title": "Debug",
+            "type": "boolean",
+            "description": "If enabled, the Actor will run in debug mode and produce more output.",
+            "editor": "checkbox",
+            "default": false
+        }
+    },
+    "required": [
+        "query",
+        "modelName"
+    ]
+}

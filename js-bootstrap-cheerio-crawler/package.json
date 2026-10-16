@@ -1,0 +1,25 @@
+{
+  "name": "js-bootstrap-cheerio-crawler",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "A skeleton project to bootstrap development with CheerioCrawler.",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@crawlee/cheerio": "^3.15.3"
+  },
+  "devDependencies": {
+    "eslint": "^9.29.0",
+    "eslint-config-prettier": "^10.1.5",
+    "prettier": "^3.5.3"
+  },
+  "scripts": {
+    "start": "node src/main.js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+  },
+  "author": "It's not you it's me"
+}

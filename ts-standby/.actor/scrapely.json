@@ -1,0 +1,19 @@
+{
+    "actorSpecification": 1,
+    "name": "ts-standby",
+    "title": "Standby Actor in TypeScript",
+    "description": "Standby Actor in TypeScript.",
+    "version": "0.0",
+    "buildTag": "latest",
+    "usesStandbyMode": true,
+    "meta": {
+        "templateId": "ts-standby",
+        "generatedBy": "<FILL-IN-MODEL>"
+    },
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "../Dockerfile"
+}

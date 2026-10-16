@@ -1,0 +1,24 @@
+{
+  "name": "js-standby-project",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "This is an example of a Scrapely Actor that uses Standby mode.",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^9.29.0",
+    "eslint-config-prettier": "^10.1.5",
+    "prettier": "^3.5.3"
+  },
+  "scripts": {
+    "start": "node ./src/main.js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+  },
+  "author": "It's not you it's me",
+  "license": "ISC"
+}

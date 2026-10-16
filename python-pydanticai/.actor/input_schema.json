@@ -1,0 +1,31 @@
+{
+    "title": "PydanticAI template",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "jokeTopic": {
+            "title": "Topic of the joke",
+            "type": "string",
+            "description": "The topic about which the AI agent will tell the joke about.",
+            "editor": "textfield",
+            "prefill": "Bad weather.",
+            "default": "Bad weather."
+        },
+        "modelName": {
+            "title": "LLM model (OpenRouter)",
+            "type": "string",
+            "description": "Model ID routed through the Scrapely LLM gateway (any OpenRouter model ID). Tokens are charged automatically to your Scrapely account, so no provider API key is needed.",
+            "enum": [
+                "deepseek/deepseek-v4-flash",
+                "deepseek/deepseek-v4-pro",
+                "moonshotai/kimi-k2.6",
+                "z-ai/glm-5.1"
+            ],
+            "default": "deepseek/deepseek-v4-flash",
+            "prefill": "deepseek/deepseek-v4-flash"
+        }
+    },
+    "required": [
+        "jokeTopic"
+    ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "cypress-module-api",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Run Cypress via its module API",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "cypress": "^16.0.0",
+    "globby": "^16.0.0",
+    "scrapely": "^1.2.13"
+  },
+  "devDependencies": {
+    "eslint": "^9.29.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-cypress": "^5.0.0",
+    "prettier": "^3.5.3"
+  },
+  "scripts": {
+    "cypress:open": "cypress open",
+    "start": "node ./src/main.js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "author": "It's not you it's me",
+  "license": "ISC"
+}

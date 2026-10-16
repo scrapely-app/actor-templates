@@ -1,0 +1,54 @@
+import { Actor, log } from 'scrapely';
+
+import { createWebResearchAgent } from './agents.js';
+
+// this is ESM project, and as such, it requires you to specify extensions in your relative imports
+// read more about this here: https://nodejs.org/docs/latest-v18.x/api/esm.html#mandatory-file-extensions
+// note that we need to use `.js` even when inside TS files
+// import { router } from './routes.js';
+
+// Actor input schema
+interface Input {
+    query: string;
+    modelName: string;
+}
+
+// The init() call configures the Actor to correctly work with the platform-provided environment - mainly the storage infrastructure. It is necessary that every Actor performs an init() call.
+await Actor.init();
+
+/**
+ * Actor code
+ */
+
+// Handle input
+const {
+    // The query default value is provided only for template testing purposes.
+    // You can remove it.
+    query,
+    modelName,
+} = (await Actor.getInput()) as Input;
+if (!query) {
+    throw new Error('An agent query is required.');
+}
+
+// Create the web research agent with tools
+const agent = createWebResearchAgent(modelName);
+
+log.info(`Querying the agent with the following query: ${query}`);
+
+// Query the agent and get the response
+const response = await agent.generate([{ role: 'user', content: query }]);
+
+log.info(`Agent response: ${response.text}`);
+
+// Charge for the task completion
+await Actor.charge({ eventName: 'task-completed' });
+
+// Push results into the dataset
+await Actor.pushData({
+    query,
+    response: response.text,
+});
+
+// Gracefully exit the Actor process. It's recommended to quit all Actors with an exit()
+await Actor.exit();

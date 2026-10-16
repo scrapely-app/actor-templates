@@ -1,0 +1,35 @@
+{
+    "title": "Python AI agent in Smolagents",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "interests": {
+            "title": "User interests",
+            "type": "array",
+            "description": "A list of topics the agent will use to fetch and summarize news.",
+            "editor": "stringList",
+            "prefill": [
+                "Artificial intelligence",
+                "Tech innovations",
+                "Open source"
+            ],
+            "default": [
+                "Artificial intelligence",
+                "Tech innovations",
+                "Open source"
+            ]
+        },
+        "model": {
+            "title": "LLM model",
+            "type": "string",
+            "description": "Model ID called through the Scrapely LLM gateway (any OpenRouter model ID, e.g. openai/gpt-4o or openai/gpt-4o-mini). Token usage is billed to your Scrapely account.",
+            "editor": "textfield",
+            "default": "openai/gpt-4o",
+            "prefill": "openai/gpt-4o"
+        }
+    },
+    "required": [
+        "interests",
+        "model"
+    ]
+}

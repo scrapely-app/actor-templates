@@ -1,0 +1,30 @@
+{
+    "title": "LangGraph agent with a web browser tool",
+    "description": "LangGraph agent that answers questions by browsing web pages",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "query": {
+            "title": "Query",
+            "type": "string",
+            "description": "Question or task for the agent. Include the URL(s) of the web page(s) the agent should read.",
+            "editor": "textfield",
+            "prefill": "Summarize what https://crawlee.dev is about and list its main features.",
+            "default": "This is a fallback test query, do nothing and !!do not call any tools!!. If asked to generate structured response, create a dummy one without optional fields - minimal as possible."
+        },
+        "modelName": {
+            "title": "LLM model (OpenRouter)",
+            "type": "string",
+            "description": "Model ID used for orchestration and summarization, routed through the Scrapely LLM gateway. Token usage is billed to your Scrapely account, so no provider API key is needed.",
+            "editor": "select",
+            "enum": [
+                "openai/gpt-4o-mini",
+                "openai/gpt-4o"
+            ],
+            "default": "openai/gpt-4o"
+        }
+    },
+    "required": [
+        "query"
+    ]
+}

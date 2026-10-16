@@ -1,0 +1,18 @@
+{
+    "actorSpecification": 1,
+    "name": "project-llamaindex-agent",
+    "title": "Project LlamaIndex Agent",
+    "description": "LlamaIndex agent to scrape, deduplicate, and summarize contact details from a website",
+    "version": "0.0",
+    "buildTag": "latest",
+    "meta": {
+        "templateId": "python-llamaindex-agent",
+        "generatedBy": "<FILL-IN-MODEL>"
+    },
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "../Dockerfile"
+}

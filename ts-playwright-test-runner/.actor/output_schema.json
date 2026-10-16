@@ -1,0 +1,16 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Output schema",
+    "properties": {
+        "results": {
+            "type": "string",
+            "title": "Results",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        },
+        "report": {
+            "type": "string",
+            "title": "HTML Report",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/report"
+        }
+    }
+}

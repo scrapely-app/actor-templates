@@ -1,0 +1,33 @@
+{
+  "name": "project-langchain",
+  "version": "0.0.3",
+  "type": "module",
+  "description": "This is a boilerplate of a Scrapely Actor.",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@crawlee/cheerio": "^3.15.3",
+    "@langchain/classic": "^1.0.12",
+    "@langchain/community": "^1.1.9",
+    "@langchain/core": "^1.1.17",
+    "@langchain/openai": "^1.2.3",
+    "hnswlib-node": "^3.0.0",
+    "langchain": "^1.2.15",
+    "tar": "^7.0.0"
+  },
+  "scripts": {
+    "start": "node src/main.js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+  },
+  "author": "It's not you it's me",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^9.29.0",
+    "eslint-config-prettier": "^10.1.5",
+    "prettier": "^3.5.3"
+  }
+}

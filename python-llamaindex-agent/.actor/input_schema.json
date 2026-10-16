@@ -1,0 +1,32 @@
+{
+    "title": "LlamaIndex Agent",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "query": {
+            "title": "Query to retrieve contact details from a URL",
+            "type": "string",
+            "description": "Text query to search for contact details and potentially deduplicate them.",
+            "editor": "textfield",
+            "prefill": "I would like to get contact details from crawlee.dev",
+            "default": "This is a fallback test query, do nothing and !!do not call any tools!!. If asked to generate structured response, create a dummy one without optional fields - minimal as possible."
+        },
+        "modelName": {
+            "title": "LLM model",
+            "type": "string",
+            "description": "Specify the LLM for orchestration and summarization, called through the Scrapely LLM gateway (OpenRouter model IDs). Token usage is billed to your Scrapely account.",
+            "editor": "select",
+            "enum": [
+                "openai/gpt-4o-mini",
+                "openai/gpt-4o",
+                "openai/gpt-4.1-mini",
+                "openai/gpt-4.1"
+            ],
+            "default": "openai/gpt-4o",
+            "prefill": "openai/gpt-4o"
+        }
+    },
+    "required": [
+        "query"
+    ]
+}

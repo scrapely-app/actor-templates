@@ -1,0 +1,28 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": [
+                    "name",
+                    "greeting"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "name": {
+                        "label": "Name",
+                        "format": "text"
+                    },
+                    "greeting": {
+                        "label": "Greeting",
+                        "format": "text"
+                    }
+                }
+            }
+        }
+    }
+}

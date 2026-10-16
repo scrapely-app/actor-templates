@@ -1,0 +1,49 @@
+{
+    "actorSpecification": 1,
+    "name": "ts-mcp-proxy",
+    "title": "TypeScript MCP proxy",
+    "description": "TypeScript Model Context Protocol proxy.",
+    "version": "0.0",
+    "buildTag": "latest",
+    "usesStandbyMode": true,
+    "meta": {
+        "templateId": "ts-mcp-proxy",
+        "generatedBy": "<FILL-IN-MODEL>"
+    },
+    "input": {
+        "title": "MCP proxy input",
+        "description": "Configures the upstream MCP server the proxy connects to. Standby runs use the default values, so change the defaults to wrap a different server.",
+        "type": "object",
+        "schemaVersion": 1,
+        "properties": {
+            "mcpServerCommand": {
+                "title": "MCP server command",
+                "type": "string",
+                "editor": "textfield",
+                "description": "Command line that starts a stdio MCP server inside the Actor container. Used when no MCP server URL is set. Make sure the server package is listed in package.json.",
+                "default": "npx -y @modelcontextprotocol/server-everything",
+                "prefill": "npx -y @modelcontextprotocol/server-everything"
+            },
+            "mcpServerUrl": {
+                "title": "MCP server URL",
+                "type": "string",
+                "editor": "textfield",
+                "description": "URL of a remote MCP server endpoint (Streamable HTTP or SSE). When set, the proxy connects to this server through mcp-remote instead of starting the command above."
+            },
+            "mcpServerAuthorization": {
+                "title": "Remote MCP server Authorization header",
+                "type": "string",
+                "editor": "textfield",
+                "isSecret": true,
+                "description": "Optional Authorization header value sent to the remote MCP server, e.g. `Bearer YOUR-API-KEY`."
+            }
+        },
+        "required": []
+    },
+    "output": "./output_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "../Dockerfile",
+    "webServerMcpPath": "/mcp"
+}

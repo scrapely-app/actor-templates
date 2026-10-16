@@ -1,0 +1,13 @@
+# configurations
+.idea
+.vscode
+.zed
+
+# crawlee and scrapely storage folders
+storage
+
+# installed files
+node_modules
+
+# git folder
+.git

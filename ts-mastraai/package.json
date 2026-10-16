@@ -1,0 +1,38 @@
+{
+  "name": "ts-mastraai",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "This is an example of a Scrapely Actor.",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^4.0.0",
+    "@mastra/core": "^1.1.0",
+    "cheerio": "^1.1.2",
+    "mastra": "^1.1.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.1.0",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.2.0",
+    "prettier": "^3.8.1",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.0",
+    "typescript-eslint": "^8.58.0"
+  },
+  "scripts": {
+    "start": "npm run start:dev",
+    "start:prod": "node dist/main.js",
+    "start:dev": "tsx src/main.ts",
+    "build": "tsc",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "author": "It's not you it's me",
+  "license": "ISC"
+}

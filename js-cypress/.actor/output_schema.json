@@ -1,0 +1,16 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Output schema",
+    "properties": {
+        "results": {
+            "type": "string",
+            "title": "Results",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        },
+        "videos": {
+            "type": "string",
+            "title": "Responses",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/keys?collection=videos"
+        }
+    }
+}

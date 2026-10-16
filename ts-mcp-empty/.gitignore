@@ -1,0 +1,12 @@
+.idea
+.vscode
+.zed
+storage
+scrapely_storage
+crawlee_storage
+node_modules
+dist
+tsconfig.tsbuildinfo
+
+# Added by Scrapely CLI
+.venv
