@@ -59,6 +59,396 @@
       "useCases": ["web-scraper", "data-pipeline"],
       "folder": "python-crawlee-beautifulsoup",
       "mainFile": "my_actor/main.py"
+    },
+    {
+      "id": "cli-start",
+      "aliases": [],
+      "displayName": "CLI Actor wrapper",
+      "description": "An Actor for existing command-line tools. No rewrite needed.",
+      "language": "javascript",
+      "useCases": ["data-pipeline"],
+      "folder": "cli-start",
+      "mainFile": "main.sh"
+    },
+    {
+      "id": "js-bootstrap-cheerio-crawler",
+      "aliases": [],
+      "displayName": "JavaScript minimal site crawler (Crawlee + Cheerio)",
+      "description": "A minimal site crawler for developers who already know the Scrapely SDK and Crawlee.",
+      "language": "javascript",
+      "useCases": ["web-scraper"],
+      "folder": "js-bootstrap-cheerio-crawler",
+      "mainFile": "src/main.js"
+    },
+    {
+      "id": "js-crawlee-playwright-camoufox",
+      "aliases": ["project_playwright_camoufox_crawler_js"],
+      "displayName": "JavaScript stealth crawler (Crawlee + Playwright + Camoufox)",
+      "description": "A browser crawler built to get past bot protection. Uses Camoufox, a Firefox build that looks like a real user.",
+      "language": "javascript",
+      "useCases": ["web-scraper"],
+      "folder": "js-crawlee-playwright-camoufox",
+      "mainFile": "src/main.js"
+    },
+    {
+      "id": "js-cypress",
+      "aliases": ["project_cypress"],
+      "displayName": "JavaScript test runner (Cypress)",
+      "description": "A cloud test runner for Cypress that saves results and videos.",
+      "language": "javascript",
+      "useCases": ["browser-automation"],
+      "folder": "js-cypress",
+      "mainFile": "src/main.js"
+    },
+    {
+      "id": "js-empty",
+      "aliases": ["project_empty"],
+      "displayName": "Empty JavaScript Actor",
+      "description": "An Actor with the Scrapely SDK set up, so you can build any tool you need.",
+      "language": "javascript",
+      "useCases": [],
+      "folder": "js-empty",
+      "mainFile": "src/main.js"
+    },
+    {
+      "id": "js-langchain",
+      "aliases": ["project_langchain_js"],
+      "displayName": "JavaScript website chat (LangChain)",
+      "description": "A site crawler that lets you ask AI questions about its content.",
+      "language": "javascript",
+      "useCases": ["ai-agent"],
+      "folder": "js-langchain",
+      "mainFile": "src/main.js"
+    },
+    {
+      "id": "js-langgraph-agent",
+      "aliases": ["project-langgraph-agent-javascript"],
+      "displayName": "JavaScript web search agent (LangGraph)",
+      "description": "An AI agent that answers questions by searching the web.",
+      "language": "javascript",
+      "useCases": ["ai-agent"],
+      "folder": "js-langgraph-agent",
+      "mainFile": "src/main.js"
+    },
+    {
+      "id": "js-standby",
+      "aliases": ["js_standby"],
+      "displayName": "JavaScript API Actor",
+      "description": "An Actor that stays running, ready to respond to HTTP requests. Good for APIs and real-time services.",
+      "language": "javascript",
+      "useCases": ["data-pipeline"],
+      "folder": "js-standby",
+      "mainFile": "src/main.js"
+    },
+    {
+      "id": "js-start",
+      "aliases": ["getting_started_node"],
+      "displayName": "JavaScript one-page scraper (Cheerio)",
+      "description": "A scraper that gets data from one web page with Cheerio. The simplest way to start scraping.",
+      "language": "javascript",
+      "useCases": ["web-scraper"],
+      "folder": "js-start",
+      "mainFile": "src/main.js"
+    },
+    {
+      "id": "python-beautifulsoup",
+      "aliases": [],
+      "displayName": "Python site crawler (BeautifulSoup)",
+      "description": "A lightweight crawler that follows links and gets data from static pages with BeautifulSoup. Good for blogs, news, or product listings, but it can't run client-side JavaScript.",
+      "language": "python",
+      "useCases": ["web-scraper"],
+      "folder": "python-beautifulsoup",
+      "mainFile": "my_actor/main.py"
+    },
+    {
+      "id": "python-browseruse",
+      "aliases": [],
+      "displayName": "Browser Use scraping agent",
+      "description": "An AI agent that browses a website like a person and returns structured data. Good for sites that change often or are hard to scrape with selectors.",
+      "language": "python",
+      "useCases": ["ai-agent", "web-scraper"],
+      "folder": "python-browseruse",
+      "mainFile": "my_actor/main.py"
+    },
+    {
+      "id": "python-crawlee-parsel",
+      "aliases": ["getting_started_crawlee_parsel"],
+      "displayName": "Python site crawler (Crawlee + Parsel)",
+      "description": "A crawler that follows links and gets data from static pages, with Crawlee handling retries and request queues. Uses Parsel, with native XPath and CSS selectors. Can't run client-side JavaScript.",
+      "language": "python",
+      "useCases": ["web-scraper"],
+      "folder": "python-crawlee-parsel",
+      "mainFile": "my_actor/main.py"
+    },
+    {
+      "id": "python-crawlee-playwright-camoufox",
+      "aliases": ["getting_started_crawlee_playwright_camoufox"],
+      "displayName": "Python stealth crawler (Crawlee + Playwright + Camoufox)",
+      "description": "A browser crawler built to get past bot protection. Uses Camoufox, a Firefox build that looks like a real user.",
+      "language": "python",
+      "useCases": ["web-scraper"],
+      "folder": "python-crawlee-playwright-camoufox",
+      "mainFile": "my_actor/main.py"
+    },
+    {
+      "id": "python-crewai",
+      "aliases": [],
+      "displayName": "Python social media agent (CrewAI)",
+      "description": "A team of AI agents that research and analyze social media.",
+      "language": "python",
+      "useCases": ["ai-agent"],
+      "folder": "python-crewai",
+      "mainFile": "my_actor/main.py"
+    },
+    {
+      "id": "python-empty",
+      "aliases": [],
+      "displayName": "Empty Python Actor",
+      "description": "An Actor with the Scrapely SDK set up, so you can build any tool you need.",
+      "language": "python",
+      "useCases": [],
+      "folder": "python-empty",
+      "mainFile": "my_actor/main.py"
+    },
+    {
+      "id": "python-langgraph",
+      "aliases": [],
+      "displayName": "Python social media agent (LangGraph)",
+      "description": "An AI agent for social media research, built on graph-based, multi-step workflows.",
+      "language": "python",
+      "useCases": ["ai-agent"],
+      "folder": "python-langgraph",
+      "mainFile": "my_actor/main.py"
+    },
+    {
+      "id": "python-llamaindex-agent",
+      "aliases": [],
+      "displayName": "Python contact finder agent (LlamaIndex)",
+      "description": "An AI agent that finds and summarizes contact details from a website.",
+      "language": "python",
+      "useCases": ["ai-agent"],
+      "folder": "python-llamaindex-agent",
+      "mainFile": "my_actor/main.py"
+    },
+    {
+      "id": "python-mcp-empty",
+      "aliases": [],
+      "displayName": "Python MCP server",
+      "description": "An MCP server that gives AI assistants like Claude and Cursor your own tools, with built-in pay-per-event billing.",
+      "language": "python",
+      "useCases": ["ai-agent", "data-pipeline"],
+      "folder": "python-mcp-empty",
+      "mainFile": "my_actor/main.py"
+    },
+    {
+      "id": "python-mcp-proxy",
+      "aliases": [],
+      "displayName": "Python MCP proxy",
+      "description": "A proxy that turns any existing MCP server into a monetized Actor. Supports stdio, HTTP, and SSE.",
+      "language": "python",
+      "useCases": ["ai-agent", "data-pipeline"],
+      "folder": "python-mcp-proxy",
+      "mainFile": "my_actor/main.py"
+    },
+    {
+      "id": "python-playwright",
+      "aliases": [],
+      "displayName": "Python browser crawler (Playwright)",
+      "description": "A crawler that uses a real browser through Playwright, so it gets data HTTP crawlers miss. Good for social feeds, dashboards, or single-page apps.",
+      "language": "python",
+      "useCases": ["web-scraper", "browser-automation"],
+      "folder": "python-playwright",
+      "mainFile": "my_actor/main.py"
+    },
+    {
+      "id": "python-pydanticai",
+      "aliases": [],
+      "displayName": "Python joke agent (PydanticAI)",
+      "description": "An AI agent that tells jokes, built with PydanticAI. A starting point for any AI agent.",
+      "language": "python",
+      "useCases": ["ai-agent"],
+      "folder": "python-pydanticai",
+      "mainFile": "my_actor/main.py"
+    },
+    {
+      "id": "python-scrapy",
+      "aliases": [],
+      "displayName": "Python site crawler (Scrapy)",
+      "description": "A crawler for large sites, built on the Scrapy framework. Can't run client-side JavaScript.",
+      "language": "python",
+      "useCases": ["web-scraper"],
+      "folder": "python-scrapy",
+      "mainFile": "my_actor/main.py"
+    },
+    {
+      "id": "python-selenium",
+      "aliases": [],
+      "displayName": "Python browser crawler (Selenium)",
+      "description": "A crawler that renders JavaScript in Chrome through Selenium before getting data. Good for social feeds, dashboards, or single-page apps.",
+      "language": "python",
+      "useCases": ["web-scraper", "browser-automation"],
+      "folder": "python-selenium",
+      "mainFile": "my_actor/main.py"
+    },
+    {
+      "id": "python-smolagents",
+      "aliases": [],
+      "displayName": "Python news agent (Smolagents)",
+      "description": "An AI agent that finds and summarizes news on topics you choose.",
+      "language": "python",
+      "useCases": ["ai-agent"],
+      "folder": "python-smolagents",
+      "mainFile": "my_actor/main.py"
+    },
+    {
+      "id": "python-standby",
+      "aliases": [],
+      "displayName": "Python API Actor",
+      "description": "An Actor that stays running, ready to respond to HTTP requests. Good for APIs and real-time services.",
+      "language": "python",
+      "useCases": ["data-pipeline"],
+      "folder": "python-standby",
+      "mainFile": "my_actor/main.py"
+    },
+    {
+      "id": "python-start",
+      "aliases": ["getting_started_python"],
+      "displayName": "Python one-page scraper (BeautifulSoup)",
+      "description": "A scraper that gets data from one web page with BeautifulSoup. The simplest way to start scraping.",
+      "language": "python",
+      "useCases": ["web-scraper"],
+      "folder": "python-start",
+      "mainFile": "my_actor/main.py"
+    },
+    {
+      "id": "python-uv",
+      "aliases": [],
+      "displayName": "Empty Python Actor (uv)",
+      "description": "An Actor with the Scrapely SDK set up and dependencies managed by the uv package manager, so you can build any tool you need.",
+      "language": "python",
+      "useCases": [],
+      "folder": "python-uv",
+      "mainFile": "my_actor/main.py"
+    },
+    {
+      "id": "ts-beeai-agent",
+      "aliases": [],
+      "displayName": "TypeScript social media agent (BeeAI)",
+      "description": "An AI agent for social media research, with built-in observability and tracing.",
+      "language": "typescript",
+      "useCases": ["ai-agent"],
+      "folder": "ts-beeai-agent",
+      "mainFile": "src/main.ts"
+    },
+    {
+      "id": "ts-crawlee-cheerio",
+      "aliases": ["project_cheerio_crawler_ts"],
+      "displayName": "TypeScript site crawler (Crawlee + Cheerio)",
+      "description": "A fast crawler that follows links and gets data from static pages, with Crawlee handling retries, queues, and proxies. Good for blogs, news, or product listings, but it can't run client-side JavaScript.",
+      "language": "typescript",
+      "useCases": ["web-scraper"],
+      "folder": "ts-crawlee-cheerio",
+      "mainFile": "src/main.ts"
+    },
+    {
+      "id": "ts-crawlee-playwright-camoufox",
+      "aliases": ["project_playwright_camoufox_crawler_ts"],
+      "displayName": "TypeScript stealth crawler (Crawlee + Playwright + Camoufox)",
+      "description": "A browser crawler built to get past bot protection. Uses Camoufox, a Firefox build that looks like a real user.",
+      "language": "typescript",
+      "useCases": ["web-scraper"],
+      "folder": "ts-crawlee-playwright-camoufox",
+      "mainFile": "src/main.ts"
+    },
+    {
+      "id": "ts-crawlee-puppeteer-chrome",
+      "aliases": ["project_puppeteer_crawler_ts"],
+      "displayName": "TypeScript browser crawler (Crawlee + Puppeteer + Chrome)",
+      "description": "A browser crawler that renders JavaScript in headless Chrome, with Crawlee handling retries, queues, and proxies. Good for social feeds, dashboards, or single-page apps.",
+      "language": "typescript",
+      "useCases": ["web-scraper"],
+      "folder": "ts-crawlee-puppeteer-chrome",
+      "mainFile": "src/main.ts"
+    },
+    {
+      "id": "ts-empty",
+      "aliases": ["ts_empty"],
+      "displayName": "Empty TypeScript Actor",
+      "description": "An Actor with the Scrapely SDK set up, so you can build any tool you need.",
+      "language": "typescript",
+      "useCases": [],
+      "folder": "ts-empty",
+      "mainFile": "src/main.ts"
+    },
+    {
+      "id": "ts-mastraai",
+      "aliases": [],
+      "displayName": "TypeScript social media agent (Mastra)",
+      "description": "An AI agent for social media research, built on a TypeScript-native framework.",
+      "language": "typescript",
+      "useCases": ["ai-agent"],
+      "folder": "ts-mastraai",
+      "mainFile": "src/main.ts"
+    },
+    {
+      "id": "ts-mcp-empty",
+      "aliases": [],
+      "displayName": "TypeScript MCP server",
+      "description": "An MCP server that gives AI assistants like Claude and Cursor your own tools, with built-in pay-per-event billing.",
+      "language": "typescript",
+      "useCases": ["ai-agent", "data-pipeline"],
+      "folder": "ts-mcp-empty",
+      "mainFile": "src/main.ts"
+    },
+    {
+      "id": "ts-mcp-proxy",
+      "aliases": [],
+      "displayName": "TypeScript MCP proxy",
+      "description": "A proxy that turns any existing MCP server into a monetized Actor. Supports stdio, HTTP, and SSE.",
+      "language": "typescript",
+      "useCases": ["ai-agent", "data-pipeline"],
+      "folder": "ts-mcp-proxy",
+      "mainFile": "src/main.ts"
+    },
+    {
+      "id": "ts-playwright-test-runner",
+      "aliases": ["project_playwright_test_runner"],
+      "displayName": "TypeScript test runner (Playwright)",
+      "description": "An automated browser test runner with results you can access via API.",
+      "language": "typescript",
+      "useCases": ["browser-automation"],
+      "folder": "ts-playwright-test-runner",
+      "mainFile": "src/main.ts"
+    },
+    {
+      "id": "ts-standby",
+      "aliases": ["ts_standby"],
+      "displayName": "TypeScript API Actor",
+      "description": "An Actor that stays running, ready to respond to HTTP requests. Good for APIs and real-time services.",
+      "language": "typescript",
+      "useCases": ["data-pipeline"],
+      "folder": "ts-standby",
+      "mainFile": "src/main.ts"
+    },
+    {
+      "id": "ts-start",
+      "aliases": ["getting_started_typescript"],
+      "displayName": "TypeScript one-page scraper (Cheerio)",
+      "description": "A scraper that gets data from one web page with Cheerio. The simplest way to start scraping.",
+      "language": "typescript",
+      "useCases": ["web-scraper"],
+      "folder": "ts-start",
+      "mainFile": "src/main.ts"
+    },
+    {
+      "id": "ts-start-bun",
+      "aliases": ["getting_started_typescript_bun"],
+      "displayName": "TypeScript one-page scraper (Bun + Cheerio)",
+      "description": "Get data from one web page with Cheerio, on the fast Bun runtime.",
+      "language": "typescript",
+      "useCases": ["web-scraper"],
+      "folder": "ts-start-bun",
+      "mainFile": "src/main.ts"
     }
   ]
 }
