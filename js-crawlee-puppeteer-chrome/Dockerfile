@@ -1,7 +1,7 @@
 # Specify the base Docker image. You can read more about
 # the available images at https://crawlee.dev/docs/guides/docker-images
 # You can also use any other image from Docker Hub.
-FROM scrapely/actor-node-puppeteer-chrome:24-latest
+FROM scrapely/actor-node-puppeteer-chrome:24-25.12.0-latest
 
 # Check preinstalled packages
 RUN npm ls @crawlee/core scrapely puppeteer playwright
