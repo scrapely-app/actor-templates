@@ -10,6 +10,7 @@
     "@modelcontextprotocol/sdk": "^1.17.5",
     "express": "^5.1.0",
     "cors": "^2.8.5",
+    "scrapely": "^1.2.35",
     "zod": "^3.25.76"
   },
   "devDependencies": {

@@ -6,7 +6,9 @@
   "engines": {
     "node": ">=22"
   },
-  "dependencies": {},
+  "dependencies": {
+    "scrapely": "^1.2.35"
+  },
   "devDependencies": {
     "@types/node": "^24.0.0",
     "eslint": "^9.29.0",

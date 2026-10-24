@@ -11,6 +11,7 @@
     "@mastra/core": "^1.1.0",
     "cheerio": "^1.1.2",
     "mastra": "^1.1.0",
+    "scrapely": "^1.2.35",
     "zod": "^4.3.6"
   },
   "devDependencies": {
