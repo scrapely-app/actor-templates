@@ -12,6 +12,7 @@
     "mcp-remote": "0.14.2",
     "body-parser": "^2.2.0",
     "express": "^5.1.0",
+    "scrapely": "^1.2.35",
     "zod": "^3.25.76"
   },
   "devDependencies": {

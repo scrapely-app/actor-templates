@@ -24,6 +24,7 @@
   "dependencies": {
     "@playwright/test": "1.61.1",
     "@types/uuid": "^11.0.0",
+    "scrapely": "^1.2.35",
     "uuid": "^14.0.0",
     "@types/node": "^24.0.0",
     "eslint": "^9.29.0",

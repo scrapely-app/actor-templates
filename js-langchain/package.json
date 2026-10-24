@@ -14,6 +14,7 @@
     "@langchain/openai": "^1.2.3",
     "hnswlib-node": "^3.0.0",
     "langchain": "^1.2.15",
+    "scrapely": "^1.2.35",
     "tar": "^7.0.0"
   },
   "scripts": {
